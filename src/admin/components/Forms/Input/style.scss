@@ -1,0 +1,65 @@
+.form-group {
+	margin-bottom: 45px;
+	position: relative;
+	border: 0;
+}
+.form-label {
+	font-size: 20px;
+	position: absolute;
+	color: $fontPostColor;
+	left: 18px;
+	top: 9px;
+	z-index: 0;
+	opacity: 1;
+	transition: $transition;
+
+	&.isActive {
+		left: 0;
+		top: -25px;
+		font-size: 13px;
+		transition: $transition;
+	}
+}
+.form-field {
+	background: transparent;
+	height: 50px;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	border-bottom: 1px solid $mainPostColor;
+	padding: 15px;
+	position: relative;
+	z-index: 1;
+	font-size: 20px;
+	color: $mainPostColor;
+	
+
+	&:focus, &:hover {
+		background: $mainPostColor;
+		color: $navBg;
+
+		& + .form-label {
+			left: 0;
+			top: -25px;
+			font-size: 13px;
+			transition: $transition;
+		}
+	}
+	&:invalid,
+	&.error {
+		outline: 0;
+		border: none;
+		border-bottom: 1px solid $orangeColor;
+		color: $orangeColor;
+
+		& + .form-label {
+			color: $orangeColor;
+		}
+	}
+}
+
+.form-textarea {
+	min-height: 200px;
+	height: 100%;
+	resize: vertical;	
+}

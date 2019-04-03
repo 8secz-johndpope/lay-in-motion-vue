@@ -1,14 +1,19 @@
 <template lang="pug">
 	aside.panel-sidebar
-		.nav-title
-			p Dashboard
+		pre {{ links }}
 		ul.nav
-			li.nav-item(v-for='section in sections')
-				router-link(v-bind:to='/blog/').nav-link 
-					p {{ section }}
+			li.nav-item
+				button(@click="componentLinks='Blog'").nav-link 
+					p Blog
+			li.nav-item
+				button(@click="componentLinks='createPost'").nav-link 
+					p createPost
+
 </template>
 
 <script>
+import Blog from '../articlesList/index.vue';
+import createPost from '../createPost/index.vue';
 
 export default {
 	data () {
@@ -20,9 +25,18 @@ export default {
 				'Docs',
 				'Sotials',
 				'Settings'
-			]
+			],
+/*			componentLinks: {
+				createPost,
+	    		Blog
+			}*/
 		}
 	},
+	props: ['links'],
+	components: {
+		Blog,
+		createPost
+	}
 
 }
 </script>

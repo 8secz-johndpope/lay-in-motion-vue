@@ -1,16 +1,10 @@
 <template lang="pug">
 	.form-creat
+
 		form
-			.form-group
-				.input-group
-					input(type="text" id='title-input').form-field
-					label(for="title-input").form-label Post's title
-					i.bar
-			.form-group
-				.input-group
-					textarea(type="textarea" id='message-input').form-field.form-textarea
-					label(for="message-input").form-label Post's message
-					i.bar
+			formFields
+				slot(name="input")
+				slot(name="textarea")
 			.form-group
 				.form-checkboxes(v-for="tag in tags")
 					label(v-bind:for="tag" ) {{ tag }}
@@ -20,6 +14,7 @@
 </template>
 
 <script>
+import formFields from '../Input/idnex.vue'
 
 export default {
 	data() {
@@ -34,6 +29,9 @@ export default {
 			]
 		}
 	}, 
+	components: {
+		formFields
+	}
 
 }
 </script>

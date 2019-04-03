@@ -3,7 +3,8 @@
 	height: 60px;
 	border-bottom: 1px solid $darkblueColor;
 	display: flex;
-
+	align-items: center;
+	padding: 5px 15px;
 	.logo {
 		&-img {
 			display: inline-block;

@@ -10,14 +10,16 @@
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
-
 		&-item {
 			width: 100%;
 		}
-		&-link, &-title {
+		&-link {
 			display: block;
 			padding: 25px;
-			opacity: .7;
+			width: 100%;
+			text-align: left;
+			cursor: pointer;
+
 			p {
 				text-transform: uppercase;
 				font-size: 14px;
@@ -25,13 +27,7 @@
 				font-weight: 700;
 			}
 			&:hover {
-				opacity: 1;
-			}
-		}
-		&-title {
-			background: $darkblueColor;
-			&:hover {
-				opacity: .7;
+				background: $darkblueColor;
 			}
 		}
 	}
