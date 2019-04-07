@@ -1,0 +1,40 @@
+.b-article {
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid $darkblueColor;
+	border-radius: 5px;
+	&__title {
+		display: block;
+		font-size: 25px;
+		margin-bottom: 15px;
+	}
+	&__content {
+		display: block;
+		text-overflow: ellipsis;
+	}
+	&__tags {
+		display: block;
+		margin: 15px 0;
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			color: #fff;
+			background: $darkblueColor;
+			padding: 3px 9px;
+			border-radius: 3px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+	&__author {
+		font-size: 15px;
+		
+		display: block;
+		font-style: italic;
+		color: $darkblueColor;
+
+		span {
+			font-weight: bold;
+		}
+	}
+}

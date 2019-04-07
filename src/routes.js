@@ -4,15 +4,11 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-import View  from './admin/view/index.vue';
-import Blogs  from './admin/components/articlesList/index.vue';
-import addPost  from './admin/components/createPost/';
+import Views  from './admin/views/';
 
 
 const routes = [
-	{path: '/', component: View},
-	{path: '/blog', component: Blogs},
-	{path: '/addPost', component: addPost}
+	{path: '/', component: Views}
 ]
 
 const router = new VueRouter({

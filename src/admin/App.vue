@@ -1,25 +1,21 @@
 <template lang="pug">
-  #app    
-    router-view
+    #app
+        router-view
 </template>
 
 <script>
-import view from './view/index.vue'
+import Views from './views/'
 
 
 export default {
-    name: 'app',
-    data () {
-      return {
-
-      }
+    data() {
+        return {}
     },
     components: {
-        view
+        Views
     }
 }
 </script>
-
 <style lang="scss">
-@import './stylesheets/main.scss';
+    @import './stylesheets/main.scss';
 </style>
