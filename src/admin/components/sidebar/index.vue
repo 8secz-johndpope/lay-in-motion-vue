@@ -1,13 +1,13 @@
 <template lang="pug">
 	aside.panel-sidebar
-		pre {{ links }}
+		.logo
+			img(src="@/admin/assets/img/logo.png")
 		ul.nav
-			li.nav-item
-				button(@click="componentLinks='Blog'").nav-link 
-					p Blog
-			li.nav-item
-				button(@click="componentLinks='createPost'").nav-link 
-					p createPost
+			router-link(to="/" exact tag="li" active-class="active").nav-item 
+				p.nav-link Blog
+			router-link(to="/add" tag="li" active-class="active").nav-item
+				p.nav-link  createPost
+
 
 </template>
 
@@ -32,7 +32,6 @@ export default {
 			}*/
 		}
 	},
-	props: ['links'],
 	components: {
 		Blog,
 		createPost

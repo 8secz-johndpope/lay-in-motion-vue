@@ -1,20 +1,27 @@
 <template lang="pug">
 	.form-creat
 		form(v-if="!submitted")
+			.card
+				.form-group
+					.input-group
+						input(v-model.lazy="post.title" type="text" id='title-input').form-field
+						label(for="title-input").form-label Post's title
+						i.bar
+				.form-group
+					.input-group
+						textarea(v-model.lazy="post.content" type="textarea" id='message-input').form-field.form-textarea
+						label(for="message-input").form-label Post's message
+						i.bar
 			.form-group
-				.input-group
-					input(v-model.lazy="post.title" type="text" id='title-input').form-field
-					label(for="title-input").form-label Post's title
-					i.bar
-			.form-group
-				.input-group
-					textarea(v-model.lazy="post.content" type="textarea" id='message-input').form-field.form-textarea
-					label(for="message-input").form-label Post's message
-					i.bar
-			.form-group
-				.form-checkboxes(v-for="tag in tags")
-					label {{ tag }}
-						input(type="checkbox" :value=" tag " v-model="post.tags") 
+				.card
+					.card__title 
+						h6 Tags
+					.card__body
+						.form-checkboxes(v-for="(tag, index) in tags")
+							input(type="checkbox" :id="index" :value=" tag " v-model="post.tags") 
+							label(:for="index").form-checkboxes__lable 
+							span  {{ tag }}
+								
 			.form-group
 				.form-select
 					label Author
@@ -83,5 +90,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped src="./style.scss">
+<style lang="scss" src="./style.scss">
 </style>

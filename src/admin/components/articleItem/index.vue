@@ -11,26 +11,13 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapMutations } from 'vuex';
+
 export default {
+	props: ['articles'],
 	data () {
 		return {
-
 		}
-	},
-	computed: {
-		...mapGetters(['articles'])
-	},
-	methods: {
-		...mapActions(['fetchArticels'])
-	},
-	created() {
-		this.fetchArticels();
-		/*this.$http.get('https://vue-playlist-7ea3c.firebaseio.com/posts.json').then(function(data){
-			//console.log(data.body);
-			this.articles = data.body;
-		})*/
-	},
+	}
 }
 </script>
 

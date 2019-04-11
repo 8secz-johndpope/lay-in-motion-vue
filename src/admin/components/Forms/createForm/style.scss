@@ -1,7 +1,56 @@
 
 .form-checkboxes {
+	position: relative;
 	display: inline-block;
 	margin-right: 10px;
+	margin-bottom: 10px;
+	padding-left: 40px; 
+	
+	&__lable {
+		position: absolute;
+		left: 0;
+		min-height: 40px;
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+
+		&:before {
+			@include pseudo;
+			width: 20px;
+			height: 20px;
+			background-color: $blue;
+			border: 1px solid $blue;
+		}
+		&:after {
+			@include pseudo;
+			width: 5px;
+			height: 11px;
+			opacity: 0;
+			top: 5px;
+			left: 7px;
+			border-right: 2px solid #fff;
+			border-bottom: 2px solid #fff;
+			transform: rotate(45deg) scale(0);
+			transition: transform .25s cubic-bezier(.27,.01,.38,1.06),border .25s cubic-bezier(.27,.01,.38,1.06),-webkit-transform .25s cubic-bezier(.27,.01,.38,1.06);
+			transition-delay: .1s;
+		}	
+	}
+	input {
+		position: absolute;
+	    z-index: -1;
+	    opacity: 0;		
+
+	    &:checked + .form-checkboxes__lable  {
+	    		&:before {
+					background-color: $blue;
+				}
+				&:after {
+					opacity: 1;
+					transition: all .25s cubic-bezier(.27,.01,.38,1.06)
+				}
+	    }
+	}
+
 }
 .form-btn {
 	background: $mainBg;
@@ -10,4 +59,27 @@
 	border-radius: 5px;
 	cursor: pointer;
 	font-size: 20px;
+}
+.card {
+	background: #fff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	box-shadow: 0 0.5px 4px $blue;
+	margin-bottom: 20px;
+
+	&__title {
+		padding: 15px;
+		border-bottom: 1px solid $blue;
+
+		h6 {
+			font-size: 18px;
+		}
+	}
+	&__body {
+		padding: 15px;
+		display: flex;
+		flex-direction: column;
+	}
 }
