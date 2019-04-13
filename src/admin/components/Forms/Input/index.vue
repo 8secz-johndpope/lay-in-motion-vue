@@ -1,11 +1,11 @@
 <template lang="pug">
 	.form-group-wrap
-		.form-group(slot="input")
+		.form-group(slot="inputs")
 			.input-group
 				input(type="text" id='title-input').form-field
 				label(for="title-input").form-label Post's title
 				i.bar
-		.form-group(slot="textarea")
+		.form-group(slot="textareas")
 			.input-group
 				textarea(type="textarea" id='message-input').form-field.form-textarea
 				label(for="message-input").form-label Post's message
@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 
 export default {
 	data() {

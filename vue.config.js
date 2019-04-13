@@ -7,7 +7,10 @@ module.exports = {
         loaderOptions: {
             // pass options to sass-loader
             sass: {
-                data: `@import "./src/admin/stylesheets/_variables.scss"; @import "./src/admin/stylesheets/_mixins.scss"; `
+                data: `
+                    @import "./src/admin/stylesheets/_variables.scss"; 
+                    @import "./src/admin/stylesheets/_mixins.scss"; 
+                `
             }
         }
     },

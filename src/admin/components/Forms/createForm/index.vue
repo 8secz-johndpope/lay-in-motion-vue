@@ -12,14 +12,13 @@
 						textarea(v-model.lazy="post.content" type="textarea" id='message-input').form-field.form-textarea
 						label(for="message-input").form-label Post's message
 						i.bar
-			.form-group
-				.card
-					.card__title 
-						h6 Tags
-					.card__body
-						.form-checkboxes(v-for="(tag, index) in tags")
-							input(type="checkbox" :id="index" :value=" tag " v-model="post.tags") 
-							label(:for="index").form-checkboxes__lable 
+			.card
+				.card__header
+					h6 Tags
+				.card__body
+					.form-checkboxes.checkboxes(v-for="(tag, index) in tags")
+						label(:for="index").checkboxes__label
+							input(type="checkbox" :id="index" :value=" tag " v-model="post.tags").checkboxes__input
 							span  {{ tag }}
 								
 			.form-group
@@ -35,7 +34,7 @@
 </template>
 
 <script>
-import formFields from '../Input/'
+import formFields from '../Input/index'
 
 export default {
 	data() {

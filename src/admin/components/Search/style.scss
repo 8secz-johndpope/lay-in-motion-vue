@@ -1,9 +1,8 @@
 .b-search {
-	overflow: hidden;
 	
 	&__inner {
-		box-shadow: 0 2px 5px $navBg;
-		margin-bottom: 50px;
+		border-left: 1px solid $blue;
+		border-right: 1px solid $blue;
 	}
 	&__group {
 		position: relative;
@@ -16,12 +15,15 @@
 		padding: 10px 25px 10px 60px;
 		color: $darkblueColor;
 		border: 0;
-
+		
+	 	&::placeholder {
+	 		font-size: 14px;
+	 	}
 	}
 	
 	&__icon {
-		height: 35px;
-		width: 35px;
+		height: 25px;
+		width: 25px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);

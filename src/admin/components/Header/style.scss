@@ -1,0 +1,18 @@
+.panel-header {
+	padding-bottom: 20px;
+
+	&__inner {
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+		box-shadow: 0 2px 5px $blue;
+	}
+	.logo {
+		&-img {
+			display: inline-block;
+			width: 200px;
+		}
+	}
+}

@@ -1,48 +1,45 @@
 <template lang=pug>
 	.panel-wrapper
+		appHeader
 		aside.panel-sidebar
 			.logo
 				img(src="@/admin/assets/img/logo.png")
 			ul.nav
 				li.nav-item
-					button(v-on:click="componentLinks='createPost'").nav-link 
+					button(v-on:click="componentLinks='Create'").nav-link 
 						p createPost
 				li.nav-item
 					button(v-on:click="componentLinks='Blog'").nav-link 
 						p Blog
 		.panel-content
-			breadcrumb
-			search
 			component(:is="componentLinks")
 
 </template>
 
 <script>
-import breadcrumb from '../components/breadcrumb/index';
-import createPost from '../components/createPost/index';
-import Blog from '../components/articlesList/index';
+import appHeader from '../components/Header/index';
+import Create from '../components/Create/index';
+import Blog from '../components/Blog/index';
 import sidebar from '../components/Sidebar/index';
-import search from '../components/Search/index';
 
 export default {
 
 	data () {
 		return {
 			componentLinks: {
-				createPost,
+				Create,
 				Blog
 			}
 		}
 	},
 	components: {
-		breadcrumb,
-		createPost,
+		appHeader,
+		Create,
 		Blog,
-		sidebar,
-		search
+		sidebar
     }
 }
 </script>
 
-<style lang="scss" scoped src="./style.scss">
+<style lang="scss" src="./style.scss">
 </style>

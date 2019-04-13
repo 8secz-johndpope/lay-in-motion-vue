@@ -1,11 +1,11 @@
 <template lang="pug">
-	.s-articles
-		h3.s-articles__title All Posts		
-		articleItem( :articles="articles" )
+	.s-blog
+		h3.s-blog__title All Posts		
+		BlogItem( :articles="articles" )
 </template>
 
 <script>
-import articleItem from '../articleItem/index';
+import BlogItem from '../BlogItem/index';
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
@@ -27,7 +27,7 @@ export default {
 		})*/
 	},
 	components: {
-		articleItem
+		BlogItem
 	}
 }
 </script>

@@ -1,7 +1,6 @@
 <template lang="pug">
-	.panel-main
-		.createPost
-			createForm
+	.createPost
+		createForm
 </template>
 
 <script>

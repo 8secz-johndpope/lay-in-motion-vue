@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import Blog from '../articlesList/index.vue';
-import createPost from '../createPost/index.vue';
+import Blog from '../Blog/index';
+import createPost from '../Create/index';
 
 export default {
 	data () {
@@ -40,4 +40,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped src="./style.scss"></style>
+<style lang="scss" src="./style.scss"></style>
