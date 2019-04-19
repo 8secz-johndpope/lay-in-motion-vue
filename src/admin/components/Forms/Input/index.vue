@@ -1,6 +1,6 @@
 <template lang="pug">
 	.form-group-wrap
-		.form-group(slot="inputs")
+		.form-group(slot="input")
 			.input-group
 				input(type="text" id='title-input').form-field
 				label(for="title-input").form-label Post's title
@@ -14,14 +14,15 @@
 
 <script>
 
-
 export default {
 	data() {
 		return {
 			
 		}
 	}, 
-
+	components: {
+		//formFields
+	}
 }
 </script>
 

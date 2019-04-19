@@ -7,6 +7,8 @@
 				p.nav-link Blog
 			router-link(to="/add" tag="li" active-class="active").nav-item
 				p.nav-link  createPost
+			router-link(to="/Blog" tag="li" active-class="active").nav-item
+				p.nav-link  Blog
 
 
 </template>

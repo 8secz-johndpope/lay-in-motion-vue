@@ -8,8 +8,8 @@ module.exports = {
             // pass options to sass-loader
             sass: {
                 data: `
-                    @import "./src/admin/stylesheets/_variables.scss"; 
-                    @import "./src/admin/stylesheets/_mixins.scss"; 
+                    @import "@/stylesheets/_variables.scss"; 
+                    @import "@/stylesheets/_mixins.scss"; 
                 `
             }
         }

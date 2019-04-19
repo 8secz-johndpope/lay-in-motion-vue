@@ -1,7 +1,8 @@
 <template lang=pug>
 	.panel-wrapper
 		appHeader
-		aside.panel-sidebar
+		sidebar
+		//aside.panel-sidebar
 			.logo
 				img(src="@/admin/assets/img/logo.png")
 			ul.nav

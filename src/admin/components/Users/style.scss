@@ -39,5 +39,19 @@
         box-shadow: 0 0 5px  $navBg;
         z-index: 2;
         padding: 10px;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity .3s;
+        visibility: hidden;
+    }
+}
+.dropdown-toggle{
+    &.is-active {
+        & + .b-users__actions {
+            height: auto;
+            opacity: 1;
+            visibility: visible;
+        }
     }
 }

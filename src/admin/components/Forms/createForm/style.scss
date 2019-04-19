@@ -1,4 +1,8 @@
-
+.form {
+	&-wrap {
+		padding: 10px;
+	}
+}
 .checkboxes {
 	position: relative;
 	display: inline-block;
@@ -80,5 +84,9 @@
 		padding: 15px;
 		display: flex;
 		flex-direction: column;
+	}
+	&__bottom {
+		border-top: 1px solid $blue;
+		padding: 15px;
 	}
 }
