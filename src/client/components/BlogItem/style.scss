@@ -1,0 +1,55 @@
+.b-blog {
+	@include f-col(12);
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 1px solid $darkblueColor;
+	border-radius: 4px;
+
+	@include media($sm) {
+		@include f-col(6);
+	}
+	@include media($md) {
+		@include f-col(6);
+	}
+	@include media($lg) {
+		@include f-col(3);
+	}
+	&__title {
+		display: block;
+		font-size: 25px;
+		margin-bottom: 15px;
+	}
+	&__content {
+		display: block;
+		text-overflow: ellipsis;
+	}
+	&__tags {
+		display: block;
+		margin: 15px 0;
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			color: #fff;
+			padding: 3px 9px;
+			border-radius: 3px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
+	&__author {
+		font-size: 15px;
+		
+		display: block;
+		font-style: italic;
+
+		span {
+			font-weight: bold;
+		}
+	}
+}
+.f-grid {
+    @include f-grid($xl);
+}
+.f-row {
+    @include f-row();  
+}
