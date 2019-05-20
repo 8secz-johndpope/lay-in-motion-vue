@@ -3,7 +3,7 @@
 	margin-bottom: 20px;
 	padding: 10px;
 	border: 1px solid $darkblueColor;
-	border-radius: 4px;
+
 
 	@include media($sm) {
 		@include f-col(6);

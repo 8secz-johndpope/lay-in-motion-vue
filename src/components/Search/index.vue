@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import svgSearchIcon from '@/../static/icons/search.svg';
+import svgSearchIcon from '@/static/icons/search.svg';
 
 export default {
 	data () {

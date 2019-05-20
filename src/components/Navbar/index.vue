@@ -1,21 +1,17 @@
 <template lang="pug">
 	aside.panel-sidebar
-		.logo
-			img(src="@/assets/img/logo.png")
 		ul.nav
 			router-link(to="/" exact tag="li" active-class="active").nav-item 
-				p.nav-link Blog
-			router-link(to="/add" tag="li" active-class="active").nav-item
-				p.nav-link  createPost
-			router-link(to="/Blog" tag="li" active-class="active").nav-item
-				p.nav-link  Blog
+				p.nav-link Home
+			router-link(to="/contacts" tag="li" active-class="active").nav-item
+				p.nav-link  Contacts
 
 
 </template>
 
 <script>
 import Blog from '../Blog/index';
-import createPost from '../Create/index';
+import Contacts from '@/components/Contacts/index';
 
 export default {
 	data () {
@@ -36,7 +32,7 @@ export default {
 	},
 	components: {
 		Blog,
-		createPost
+		Contacts
 	}
 
 }

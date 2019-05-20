@@ -1,31 +1,25 @@
 // vue.config.js
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 
 module.exports = {
-    devServer: {        
-        host: 'localhost',
-        port: 4000,
-        contentBase: path.join(__dirname, 'client'),
-
-        watchOptions: {
-            poll: true
-        }
-    },
     css: {
         loaderOptions: {
             // pass options to sass-loader
             sass: {
                 data: `
-                    @import "@/../stylesheets/default.scss/_index.scss";
-                    @import "@/../stylesheets/_variables.scss";
+                    @import "@/stylesheets/default.scss/_index.scss";
+                    @import "@/stylesheets/_variables.scss";
 
                 `
             }
         },
         extract: {
-            filename: '[name].css'
+            filename: 'style.css',
+            chunkFilename: 'style.css',
         }
-    },    
+    },
     chainWebpack: (config) => {
 
         const svgRule = config.module.rule('svg')
@@ -42,13 +36,15 @@ module.exports = {
                     name: "[name]-[hash:7]",
                     prefixize: true
                 });
-        config
+
+
+        /*config
             .entry("app")
                 .clear()
                 .add("./src/client/main.js")
                 .end();
         config.resolve.alias
-                .set("@", path.join(__dirname, "./src/client"));
+                .set("@", path.join(__dirname, "./src/client"));*/
         
     },
 };

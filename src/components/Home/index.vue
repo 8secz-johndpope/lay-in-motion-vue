@@ -1,10 +1,9 @@
 <template lang="pug">
-    header.panel-header
-        .panel-header__inner
-            search
+    div
+        h1 Blog
 </template>
 <script>
-import search from '../Search/index';
+
 
 export default {
 
@@ -12,7 +11,7 @@ export default {
         return {}
     },
     components: {
-        search
+
     }
 }
 </script>

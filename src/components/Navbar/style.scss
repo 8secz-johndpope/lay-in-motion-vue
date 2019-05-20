@@ -1,29 +1,15 @@
-.panel-content {
-	padding-left: 260px;
-	min-height: 100vh;
-}
 .panel-sidebar {
 	background: $navBg;
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	width: 260px;
+	width: 100%;
 	.logo {
 		height: 60px;
-		padding-top: 10px;
-		padding-left: 25px;
-
-		img {
-			height: 100%;
-		}
 	}
 	.nav {
 		display: flex;
 		flex-wrap: wrap;
 		width: 100%;
 		&-item {
-			width: 100%;
+			display: inline-block;
 		}
 		&-link {
 			display: block;
